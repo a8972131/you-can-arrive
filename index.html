@@ -48,16 +48,276 @@
   </style>
 </head>
 <body>
-
 <div class="container">
 
-<section id="intro">
+<section id="intro" style="display:block;">
   <h1>你能平安抵達冬瓜市嗎？</h1>
-  <p>你是冬瓜大學的學生，今天要騎車從冬瓜縣的蘿蔔市出發，前往冬瓜市區辦事。這條路你騎過無數次，但今天注定不會這麼順利。在你每一次看似合理的行為之下，都可能被貼上「違規者」的標籤。</p>
+  <p>你是冬瓜大學的學生，今天要騎車從冬瓜縣的蘿蔔市出發，前往冬瓜市區辦事。
+     這條路你騎過無數次，但今天注定不會這麼順利。
+     在你每一次看似合理的行為之下，都可能被貼上「違規者」的標籤。</p>
   <p>請小心選擇每一個行動，看看你是否能平安抵達冬瓜市！</p>
   <button onclick="nextScene('scene1')">出發！</button>
 </section>
 
+<section id="scene1">
+  <h2>場景 1</h2>
+  <p>這是場景 1 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result1A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result1B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result1C')">C. 選項 C 的描述</button>
+</section>
+<section id="result1A">
+  <h3>結果 A</h3>
+  <p>這是場景 1 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+<section id="result1B">
+  <h3>結果 B</h3>
+  <p>這是場景 1 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+<section id="result1C">
+  <h3>結果 C</h3>
+  <p>這是場景 1 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+
+<section id="scene2">
+  <h2>場景 2</h2>
+  <p>這是場景 2 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result2A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result2B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result2C')">C. 選項 C 的描述</button>
+</section>
+<section id="result2A">
+  <h3>結果 A</h3>
+  <p>這是場景 2 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene3')">繼續旅程</button>
+</section>
+<section id="result2B">
+  <h3>結果 B</h3>
+  <p>這是場景 2 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene3')">繼續旅程</button>
+</section>
+<section id="result2C">
+  <h3>結果 C</h3>
+  <p>這是場景 2 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene3')">繼續旅程</button>
+</section>
+
+<section id="scene3">
+  <h2>場景 3</h2>
+  <p>這是場景 3 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result3A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result3B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result3C')">C. 選項 C 的描述</button>
+</section>
+<section id="result3A">
+  <h3>結果 A</h3>
+  <p>這是場景 3 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene4')">繼續旅程</button>
+</section>
+<section id="result3B">
+  <h3>結果 B</h3>
+  <p>這是場景 3 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene4')">繼續旅程</button>
+</section>
+<section id="result3C">
+  <h3>結果 C</h3>
+  <p>這是場景 3 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene4')">繼續旅程</button>
+</section>
+
+<section id="scene4">
+  <h2>場景 4</h2>
+  <p>這是場景 4 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result4A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result4B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result4C')">C. 選項 C 的描述</button>
+</section>
+<section id="result4A">
+  <h3>結果 A</h3>
+  <p>這是場景 4 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene5')">繼續旅程</button>
+</section>
+<section id="result4B">
+  <h3>結果 B</h3>
+  <p>這是場景 4 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene5')">繼續旅程</button>
+</section>
+<section id="result4C">
+  <h3>結果 C</h3>
+  <p>這是場景 4 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene5')">繼續旅程</button>
+</section>
+
+<section id="scene5">
+  <h2>場景 5</h2>
+  <p>這是場景 5 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result5A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result5B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result5C')">C. 選項 C 的描述</button>
+</section>
+<section id="result5A">
+  <h3>結果 A</h3>
+  <p>這是場景 5 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene6')">繼續旅程</button>
+</section>
+<section id="result5B">
+  <h3>結果 B</h3>
+  <p>這是場景 5 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene6')">繼續旅程</button>
+</section>
+<section id="result5C">
+  <h3>結果 C</h3>
+  <p>這是場景 5 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene6')">繼續旅程</button>
+</section>
+
+<section id="scene6">
+  <h2>場景 6</h2>
+  <p>這是場景 6 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result6A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result6B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result6C')">C. 選項 C 的描述</button>
+</section>
+<section id="result6A">
+  <h3>結果 A</h3>
+  <p>這是場景 6 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene7')">繼續旅程</button>
+</section>
+<section id="result6B">
+  <h3>結果 B</h3>
+  <p>這是場景 6 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene7')">繼續旅程</button>
+</section>
+<section id="result6C">
+  <h3>結果 C</h3>
+  <p>這是場景 6 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene7')">繼續旅程</button>
+</section>
+
+<section id="scene7">
+  <h2>場景 7</h2>
+  <p>這是場景 7 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result7A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result7B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result7C')">C. 選項 C 的描述</button>
+</section>
+<section id="result7A">
+  <h3>結果 A</h3>
+  <p>這是場景 7 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene8')">繼續旅程</button>
+</section>
+<section id="result7B">
+  <h3>結果 B</h3>
+  <p>這是場景 7 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene8')">繼續旅程</button>
+</section>
+<section id="result7C">
+  <h3>結果 C</h3>
+  <p>這是場景 7 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene8')">繼續旅程</button>
+</section>
+
+<section id="scene8">
+  <h2>場景 8</h2>
+  <p>這是場景 8 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result8A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result8B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result8C')">C. 選項 C 的描述</button>
+</section>
+<section id="result8A">
+  <h3>結果 A</h3>
+  <p>這是場景 8 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene9')">繼續旅程</button>
+</section>
+<section id="result8B">
+  <h3>結果 B</h3>
+  <p>這是場景 8 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene9')">繼續旅程</button>
+</section>
+<section id="result8C">
+  <h3>結果 C</h3>
+  <p>這是場景 8 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene9')">繼續旅程</button>
+</section>
+
+<section id="scene9">
+  <h2>場景 9</h2>
+  <p>這是場景 9 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result9A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result9B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result9C')">C. 選項 C 的描述</button>
+</section>
+<section id="result9A">
+  <h3>結果 A</h3>
+  <p>這是場景 9 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene10')">繼續旅程</button>
+</section>
+<section id="result9B">
+  <h3>結果 B</h3>
+  <p>這是場景 9 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene10')">繼續旅程</button>
+</section>
+<section id="result9C">
+  <h3>結果 C</h3>
+  <p>這是場景 9 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene10')">繼續旅程</button>
+</section>
+
+<section id="scene10">
+  <h2>場景 10</h2>
+  <p>這是場景 10 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result10A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result10B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result10C')">C. 選項 C 的描述</button>
+</section>
+<section id="result10A">
+  <h3>結果 A</h3>
+  <p>這是場景 10 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene11')">繼續旅程</button>
+</section>
+<section id="result10B">
+  <h3>結果 B</h3>
+  <p>這是場景 10 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene11')">繼續旅程</button>
+</section>
+<section id="result10C">
+  <h3>結果 C</h3>
+  <p>這是場景 10 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene11')">繼續旅程</button>
+</section>
+
+<section id="scene11">
+  <h2>場景 11</h2>
+  <p>這是場景 11 的敘述，將根據真實交通情境描述。</p>
+  <button onclick="nextScene('result11A')">A. 選項 A 的描述</button>
+  <button onclick="nextScene('result11B')">B. 選項 B 的描述</button>
+  <button onclick="nextScene('result11C')">C. 選項 C 的描述</button>
+</section>
+<section id="result11A">
+  <h3>結果 A</h3>
+  <p>這是場景 11 中 A 選擇的實際後果，含罰則或轉場語。</p>
+  <button onclick="nextScene('scene12')">繼續旅程</button>
+</section>
+<section id="result11B">
+  <h3>結果 B</h3>
+  <p>這是場景 11 中 B 選擇的實際後果，含法條與真實案例。</p>
+  <button onclick="nextScene('scene12')">繼續旅程</button>
+</section>
+<section id="result11C">
+  <h3>結果 C</h3>
+  <p>這是場景 11 中 C 選擇的實際後果，搭配諷刺式轉場語。</p>
+  <button onclick="nextScene('scene12')">繼續旅程</button>
+</section>
+
+<section id="scene12">
+  <h2>你抵達冬瓜市了！</h2>
+  <p>雖然歷經波折，但你完成了這段奇幻又荒謬的旅程。希望下次騎車，可以不用這麼小心翼翼也不會被罰。</p>
+</section>
+
+</div>
 <script>
 function nextScene(id) {
   document.querySelectorAll('section').forEach(s => s.style.display = 'none');
@@ -65,7 +325,5 @@ function nextScene(id) {
   if (next) next.style.display = 'block';
 }
 </script>
-
-</div>
 </body>
 </html>

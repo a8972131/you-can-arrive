@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>你能平安抵達冬瓜市嗎？</title>
+
+<style>
+body { font-family: sans-serif; background: #f2f2f2; padding: 1rem; }
+section { display: none; background: white; padding: 1rem; margin-bottom: 1rem; border-radius: 8px; }
+button { display: block; margin: 0.5rem 0; padding: 0.75rem; font-size: 1rem; color: white; border: none; border-radius: 5px; }
+button:hover { opacity: 0.9; }
+.choice-btn { background: #3498db; }
+.next-btn { background: #01B468; }
+.back-btn { background: #FF8040; }
+.start-btn { background: #64A600; }
+
+.restart-btn { background: #F75000; }
+</style>
+
+</head>
+<body>
+<section id="intro" style="display:block;">
+  <h1>你能平安抵達冬瓜市嗎？</h1>
+  <p>你是冬瓜大學的學生，今天要騎車從冬瓜縣的蘿蔔市出發，前往冬瓜市區辦事。<br>
+  這條路你騎過無數次，但今天注定不會這麼順利。<br>
+  在你每一次看似合理的行為之下，都可能被貼上「違規者」的標籤。<br>
+  請小心選擇每一個行動，看看你是否能平安抵達冬瓜市！</p>
+  <button class="start-btn" onclick="showScene('scene1')">開始旅程</button>
+</section>
+<section id="scene1">
+<h2>場景1：你從冬瓜大學騎出校門，準備左轉進入主要幹道。看到空蕩蕩的待轉格，你會怎麼做？</h2>
+<div id="scene1_buttons">
+<button class="choice-btn" onclick="showResult('scene1_opt1', 'scene1', 'scene2')">A. 提早進入路口等待</button>
+<button class="choice-btn" onclick="showResult('scene1_opt2', 'scene1', 'scene2')">B. 原地等紅燈再左轉</button>
+<button class="choice-btn" onclick="showResult('scene1_opt3', 'scene1', 'scene2')">C. 騎上人行道左轉</button>
+</div>
+<div id="scene1_opt1" style="display:none;"><p>你剛剛騎到路口，就被警察攔下，開出罰單：「未依標線行駛，違反《道路交通管理處罰條例》第48條第1項第2款」。雖然大家都這樣轉，但你今天偏偏中獎了。</p></div>
+<div id="scene1_opt2" style="display:none;"><p>你沒違規，但後車狂按喇叭，有人還搖下窗對你罵「不會走是不是？」</p></div>
+<div id="scene1_opt3" style="display:none;"><p>你一上人行道就被拍下，上傳到「在地交通違規王」社群，留言超過三百則。</p></div>
+<div id="scene1_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene1', 'scene2')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene1', 'intro')">我後悔了</button>
+</div>
+</section>
+<section id="scene2">
+<h2>場景2：來到圓環口，車流紛亂、標誌不清，你會跟著前車走？還是照規定來？</h2>
+<div id="scene2_buttons">
+<button class="choice-btn" onclick="showResult('scene2_opt1', 'scene2', 'scene3')">A. 依直覺小心繞行</button>
+<button class="choice-btn" onclick="showResult('scene2_opt2', 'scene2', 'scene3')">B. 模仿前車路線</button>
+<button class="choice-btn" onclick="showResult('scene2_opt3', 'scene2', 'scene3')">C. 停車查 Google Map</button>
+</div>
+<div id="scene2_opt1" style="display:none;"><p>被警察開罰「未依規定行駛圓環」。你苦笑一下，發動車繼續騎。</p></div>
+<div id="scene2_opt2" style="display:none;"><p>通過圓環但仍疑惑方向。你搖搖頭，繼續往前。</p></div>
+<div id="scene2_opt3" style="display:none;"><p>被檢舉「妨礙交通」。你不甘心地催油門離開。</p></div>
+<div id="scene2_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene2', 'scene3')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene2', 'scene1')">我後悔了</button>
+</div>
+</section>
+<section id="scene3">
+<h2>場景3：進入學區路段，違停車佔滿騎樓和道路，你會選擇怎麼通過這段路？</h2>
+<div id="scene3_buttons">
+<button class="choice-btn" onclick="showResult('scene3_opt1', 'scene3', 'scene4')">A. 小心穿過違停車輛</button>
+<button class="choice-btn" onclick="showResult('scene3_opt2', 'scene3', 'scene4')">B. 拍照存證繞路</button>
+<button class="choice-btn" onclick="showResult('scene3_opt3', 'scene3', 'scene4')">C. 下車貼違停警語單</button>
+</div>
+<div id="scene3_opt1" style="display:none;"><p>你不小心擦撞違停車，對方反控你肇逃。你皺眉處理善後後繼續騎。</p></div>
+<div id="scene3_opt2" style="display:none;"><p>你遲到10分鐘，但保住安全與保險。你默默點讚自己的冷靜。</p></div>
+<div id="scene3_opt3" style="display:none;"><p>被民眾拍照檢舉，警察還來關切你。你只能快點騎走。</p></div>
+<div id="scene3_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene3', 'scene4')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene3', 'scene2')">我後悔了</button>
+</div>
+</section>
+<section id="scene4">
+<h2>場景4：綠燈開始倒數，眼看就要變紅，你會踩油門還是急煞？</h2>
+<div id="scene4_buttons">
+<button class="choice-btn" onclick="showResult('scene4_opt1', 'scene4', 'scene5')">A. 加速通過</button>
+<button class="choice-btn" onclick="showResult('scene4_opt2', 'scene4', 'scene5')">B. 急剎停車</button>
+<button class="choice-btn" onclick="showResult('scene4_opt3', 'scene4', 'scene5')">C. 犀利右轉進超商</button>
+</div>
+<div id="scene4_opt1" style="display:none;"><p>被拍照開罰，罰1800元。你苦笑著繼續往市區前進。</p></div>
+<div id="scene4_opt2" style="display:none;"><p>後方追撞，雙方扯皮。你搖搖頭，踩油門前進。</p></div>
+<div id="scene4_opt3" style="display:none;"><p>避開紅燈但被超商白眼。你騎上主道繼續趕路。</p></div>
+<div id="scene4_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene4', 'scene5')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene4', 'scene3')">我後悔了</button>
+</div>
+</section>
+<section id="scene5">
+<h2>場景5：你進入了一段區間測速路段，大家騎得飛快，你會選擇守法還是跟著流速？</h2>
+<div id="scene5_buttons">
+<button class="choice-btn" onclick="showResult('scene5_opt1', 'scene5', 'scene6')">A. 照限速 50 騎</button>
+<button class="choice-btn" onclick="showResult('scene5_opt2', 'scene5', 'scene6')">B. 跟大家騎 70</button>
+<button class="choice-btn" onclick="showResult('scene5_opt3', 'scene5', 'scene6')">C. 繞入對向小巷</button>
+</div>
+<div id="scene5_opt1" style="display:none;"><p>被後方車瘋狂超車怒罵。你繼續堅持安全行駛。</p></div>
+<div id="scene5_opt2" style="display:none;"><p>區間測速拍下你超速罰單。你默默接收處罰繼續前行。</p></div>
+<div id="scene5_opt3" style="display:none;"><p>誤入死巷，差點撞狗。你退車轉回主道。</p></div>
+<div id="scene5_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene5', 'scene6')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene5', 'scene4')">我後悔了</button>
+</div>
+</section>
+<section id="scene6">
+<h2>場景6：路邊車門突然打開，你反應有限，你會怎麼處理這個瞬間？</h2>
+<div id="scene6_buttons">
+<button class="choice-btn" onclick="showResult('scene6_opt1', 'scene6', 'scene7')">A. 反應不及撞上</button>
+<button class="choice-btn" onclick="showResult('scene6_opt2', 'scene6', 'scene7')">B. 成功閃避但摔車</button>
+<button class="choice-btn" onclick="showResult('scene6_opt3', 'scene6', 'scene7')">C. 高音喇叭預警</button>
+</div>
+<div id="scene6_opt1" style="display:none;"><p>警方要你寫肇事報告，對方指責你沒注意。你把車扶好繼續出發。</p></div>
+<div id="scene6_opt2" style="display:none;"><p>機車側殼脫落、腳踝擦傷。你拍掉灰繼續騎。</p></div>
+<div id="scene6_opt3" style="display:none;"><p>成功避免事故但被檢舉危駕。你苦笑出發。</p></div>
+<div id="scene6_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene6', 'scene7')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene6', 'scene5')">我後悔了</button>
+</div>
+</section>
+<section id="scene7">
+<h2>場景7：轉進小巷時發現地面滿是砂石與施工痕跡，這段路，你還走得過去嗎？</h2>
+<div id="scene7_buttons">
+<button class="choice-btn" onclick="showResult('scene7_opt1', 'scene7', 'scene8')">A. 小心壓過砂石</button>
+<button class="choice-btn" onclick="showResult('scene7_opt2', 'scene7', 'scene8')">B. 騎上人行道</button>
+<button class="choice-btn" onclick="showResult('scene7_opt3', 'scene7', 'scene8')">C. 等施工人員清理</button>
+</div>
+<div id="scene7_opt1" style="display:none;"><p>輪胎打滑摔車，這是最常見的建農事故。你拖著腿繼續騎。</p></div>
+<div id="scene7_opt2" style="display:none;"><p>閃過砂石但被行人檢舉。你低調騎離現場。</p></div>
+<div id="scene7_opt3" style="display:none;"><p>你在原地被按喇叭等了10分鐘。你發動車催走。</p></div>
+<div id="scene7_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene7', 'scene8')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene7', 'scene6')">我後悔了</button>
+</div>
+</section>
+<section id="scene8">
+<h2>場景8：夜間行駛中，對向車遠光燈直射雙眼，你還看得清楚嗎？你會怎麼應對？</h2>
+<div id="scene8_buttons">
+<button class="choice-btn" onclick="showResult('scene8_opt1', 'scene8', 'scene9')">A. 用手遮眼硬上</button>
+<button class="choice-btn" onclick="showResult('scene8_opt2', 'scene8', 'scene9')">B. 停讓對向先過</button>
+<button class="choice-btn" onclick="showResult('scene8_opt3', 'scene8', 'scene9')">C. 開遠燈反擊</button>
+</div>
+<div id="scene8_opt1" style="display:none;"><p>撞上右側高起水溝蓋。你呻吟著爬起來騎走。</p></div>
+<div id="scene8_opt2" style="display:none;"><p>對向誤判你要停，險些撞你。你皺眉騎走。</p></div>
+<div id="scene8_opt3" style="display:none;"><p>與對向互閃互罵。你氣得催油門離開現場。</p></div>
+<div id="scene8_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene8', 'scene9')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene8', 'scene7')">我後悔了</button>
+</div>
+</section>
+<section id="scene9">
+<h2>場景9：一隻狗突然衝出車前，你來得及反應嗎？你會怎麼閃？</h2>
+<div id="scene9_buttons">
+<button class="choice-btn" onclick="showResult('scene9_opt1', 'scene9', 'scene10')">A. 煞車閃避成功但摔倒</button>
+<button class="choice-btn" onclick="showResult('scene9_opt2', 'scene9', 'scene10')">B. 鳴喇叭驅趕</button>
+<button class="choice-btn" onclick="showResult('scene9_opt3', 'scene9', 'scene10')">C. 碾過去（以為會閃開）</button>
+</div>
+<div id="scene9_opt1" style="display:none;"><p>你擦傷流血，狗安然離開。你揉著膝蓋上車。</p></div>
+<div id="scene9_opt2" style="display:none;"><p>狗亂竄導致後車撞你。你忍著委屈處理事故。</p></div>
+<div id="scene9_opt3" style="display:none;"><p>你沒撞死牠卻被錄影罵翻。你裝沒事快騎走。</p></div>
+<div id="scene9_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene9', 'scene10')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene9', 'scene8')">我後悔了</button>
+</div>
+</section>
+<section id="scene10">
+<h2>場景10：在巷口準備右轉時，反光鏡角度怪異，看不清側邊來車，你會直接轉出去嗎？</h2>
+<div id="scene10_buttons">
+<button class="choice-btn" onclick="showResult('scene10_opt1', 'scene10', 'scene11')">A. 照直覺右轉</button>
+<button class="choice-btn" onclick="showResult('scene10_opt2', 'scene10', 'scene11')">B. 下車查看確認再轉</button>
+<button class="choice-btn" onclick="showResult('scene10_opt3', 'scene10', 'scene11')">C. 靠感覺慢滑出去</button>
+</div>
+<div id="scene10_opt1" style="display:none;"><p>差點被快速來車撞上。你嚇出一身冷汗繼續前行。</p></div>
+<div id="scene10_opt2" style="display:none;"><p>後車狂按喇叭。你選擇冷靜處理。</p></div>
+<div id="scene10_opt3" style="display:none;"><p>成功通過但全靠運氣。你無奈地繼續騎。</p></div>
+<div id="scene10_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene10', 'scene11')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene10', 'scene9')">我後悔了</button>
+</div>
+</section>
+<section id="scene11">
+<h2>場景11：接近冬瓜市區時，平交道警鈴響起，遮斷器還沒放下。你會選擇搶快還是等？</h2>
+<div id="scene11_buttons">
+<button class="choice-btn" onclick="showResult('scene11_opt1', 'scene11', 'ending')">A. 搶快衝過</button>
+<button class="choice-btn" onclick="showResult('scene11_opt2', 'scene11', 'ending')">B. 乖乖等火車通過</button>
+<button class="choice-btn" onclick="showResult('scene11_opt3', 'scene11', 'ending')">C. 牽車過去</button>
+</div>
+<div id="scene11_opt1" style="display:none;"><p>雖然過了但被拍照罰6000。你苦笑繼續趕路。</p></div>
+<div id="scene11_opt2" style="display:none;"><p>後方車早就違規通過。你忍住火氣繼續前行。</p></div>
+<div id="scene11_opt3" style="display:none;"><p>仍被判違規、申訴失敗。你搖搖頭踩油門。</p></div>
+<div id="scene11_nav" style="display:none;">
+<button class="next-btn" onclick="goNext('scene11', 'ending')">繼續前進</button>
+<button class="back-btn" onclick="goBack('scene11', 'scene10')">我後悔了</button>
+</div>
+</section>
+
+<section id="ending">
+  <h2>結語</h2>
+  <p>你騎得很小心、很理性、很遵法，但你還是體驗了荒謬。<br>
+  也許，你不是不會騎車，只是你活在一個「不適合好好開車的人間」。</p>
+  <button class="restart-btn" onclick="showScene('intro')">重來一次？</button>
+</section>
+
+<script>
+function showScene(id) {
+  document.querySelectorAll("section").forEach(s => s.style.display = "none");
+  document.getElementById(id).style.display = "block";
+
+  // 如果是第一場景，強制重置它
+  if (id === "scene1") {
+    document.getElementById("scene1_buttons").style.display = "block";
+    const opts = document.querySelectorAll("[id^=scene1_opt]");
+    for (let i = 0; i < opts.length; i++) {
+      opts[i].style.display = "none";
+    }
+    document.getElementById("scene1_nav").style.display = "none";
+  }
+}
+
+function showResult(optId, sceneId, nextId) {
+  const opts = document.querySelectorAll("[id^=" + sceneId + "_opt]");
+  for (let i = 0; i < opts.length; i++) {
+    opts[i].style.display = "none";
+  }
+  document.getElementById(sceneId + "_buttons").style.display = "none";
+  document.getElementById(optId).style.display = "block";
+  document.getElementById(sceneId + "_nav").style.display = "block";
+}
+
+function goNext(current, next) {
+  document.getElementById(current).style.display = "none";
+  document.getElementById(next).style.display = "block";
+
+  // 重置下一場景按鈕
+  document.getElementById(next + "_buttons").style.display = "block";
+  const opts = document.querySelectorAll("[id^=" + next + "_opt]");
+  for (let i = 0; i < opts.length; i++) {
+    opts[i].style.display = "none";
+  }
+  document.getElementById(next + "_nav").style.display = "none";
+}
+
+function goBack(current, previous) {
+  document.getElementById(current).style.display = "none";
+  document.getElementById(previous).style.display = "block";
+  document.getElementById(previous + "_buttons").style.display = "block";
+  const opts = document.querySelectorAll("[id^=" + previous + "_opt]");
+  for (let i = 0; i < opts.length; i++) {
+    opts[i].style.display = "none";
+  }
+  document.getElementById(previous + "_nav").style.display = "none";
+}
+</script>
+</body>
+</html>

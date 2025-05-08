@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>你能平安抵達冬瓜市嗎？</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 2rem; background: #fff; color: #333; }
+    section { max-width: 700px; margin: auto; display: none; }
+    section.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+    h1, h2 { color: #2c3e50; }
+    button {
+      display: block; width: 100%; padding: 1rem; margin: 1rem 0;
+      background: #007acc; color: white; border: none; border-radius: 5px;
+      font-size: 1rem; cursor: pointer;
+    }
+    button:hover { background: #005fa3; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<section id="intro" class="active">
+  <h1>你能平安抵達冬瓜市嗎？</h1>
+  <p>你是冬瓜大學的學生，今天要騎車從冬瓜縣的蘿蔔市出發，前往冬瓜市區辦事。
+  這條路你騎過無數次，但今天注定不會這麼順利。在你每一次看似合理的行為之下，都可能被貼上「違規者」的標籤。
+  請小心選擇每一個行動，看看你是否能平安抵達冬瓜市！</p>
+  <button onclick="nextScene('scene1')">出發！</button>
+</section>
+
+<section id="scene1">
+  <h2>場景一：巷口待轉</h2>
+  <p>你要左轉進入主幹道，但這裡沒有設待轉格，只有模糊不清的待轉標誌。</p>
+  <button onclick="nextScene('result1A')">A. 提早進入路口等待</button>
+  <button onclick="nextScene('result1B')">B. 原地等紅燈再左轉</button>
+  <button onclick="nextScene('result1C')">C. 騎上人行道左轉</button>
+</section>
+
+<section id="result1A">
+  <h3>你被警察攔下並開罰</h3>
+  <p>違反《道路交通管理處罰條例》第48條第1項第2款。你搖搖頭，把罰單塞進口袋，繼續騎車前進。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+<section id="result1B">
+  <h3>你沒違規，但被後車按喇叭罵爆</h3>
+  <p>你深吸一口氣，把機車扶好，繼續往冬瓜市的方向前進。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+<section id="result1C">
+  <h3>你違規爆紅了</h3>
+  <p>你上人行道被拍下，上傳社群成為爆紅違規案例。你一邊嘀咕一邊出發。</p>
+  <button onclick="nextScene('scene2')">繼續旅程</button>
+</section>
+
+<!-- ... 這裡會有 scene2 ~ scene11 的完整內容 ... -->
+
+<section id="scene12">
+  <h2>你抵達冬瓜市了！</h2>
+  <p>雖然歷經波折，但你完成了這段奇幻又荒謬的旅程。
+  希望下次騎車，可以不用這麼小心翼翼也不會被罰。安全騎乘，從制度與設計做起。</p>
+</section>
+
+</div>
+<script>
+function nextScene(id) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
